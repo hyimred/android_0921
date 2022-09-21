@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextBemenet"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:hint="Írj ide valamit!" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/nagybetus"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextBemenet"
+        android:layout_centerHorizontal="true"
+        android:text="Nagy betűs szöveg" />
+    <Button
+        android:id="@+id/kisbetus"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nagybetus"
+        android:layout_centerHorizontal="true"
+        android:text="Kis betűs szöveg"
+        />
+    <Button
+        android:id="@+id/veletlenszin"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kisbetus"
+        android:layout_centerHorizontal="true"
+        android:text="Véletlen szín generálás"
+        />
+
+    <TextView
+        android:id="@+id/textViewKimenet"
+        android:layout_marginHorizontal="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/veletlenszin"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+</RelativeLayout>
